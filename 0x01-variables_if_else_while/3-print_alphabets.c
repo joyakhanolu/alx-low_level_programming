@@ -12,7 +12,9 @@ int main(void)
 
 	for (now = 'a'; now <= 'z'; now++)
 		putchar(now);
-	printf("\n");
+	for (now = 'A'; now <= 'Z'; now++)
+		putchar(now);
+	putchar('\n');
 
-		return (0);
+	return (0);
 }
