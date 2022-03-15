@@ -7,7 +7,7 @@
  *Description: prints all natural numbers from n - 98
  *Return: void
  */
-void print_to_08(int n)
+void print_to_98(int n)
 {
 	if (n < 98)
 	{
