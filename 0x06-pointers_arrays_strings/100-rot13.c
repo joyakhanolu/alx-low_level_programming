@@ -3,7 +3,7 @@
 
 /**
  * *rot13 - encodes a string using rot13
- * @str: string to be encoded
+ * @s: string to be encoded
  *
  * Return: encoded string
  */
@@ -15,16 +15,16 @@ char *rot13(char *s)
 	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (k = 0; k < 52; k++)
 		{
-			if (str[i] == data1[k])
+			if (s[i] == data1[k])
 			{
-				str[i] = datarot[k];
+				s[i] = datarot[k];
 				break;
 			}
 		}
 	}
-	return (str);
+	return (s);
 }
