@@ -5,12 +5,12 @@
  * @a: string to be printed
  */
 
-void _puts_recursion(char *a)
+void _puts_recursion(char *s)
 {
-	if (*a)
+	if (*s)
 	{
-		_putchar(*a);
-		_puts_recursion(a + 1);
+		_putchar(*s);
+		_puts_recursion(s + 1);
 	}
 
 	else
