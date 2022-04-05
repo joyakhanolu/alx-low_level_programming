@@ -1,10 +1,9 @@
-#include "main.h"
 #include <stdlib.h>
 
 /**
  * **alloc_grid - returns a pointer to a 2 dimensional array of integers.
- * @width - int
- * @height - int
+ * @width: int
+ * @height: int
  * Return: Null on failure
  */
 
@@ -23,6 +22,7 @@ else
 		tab[j] = malloc(sizeof(**tab) * width);
 		if (tab[j] == 0)
 		{
+			/*Free everything if malloc fails*/
 			while (j--)
 				free(tab[j]);
 			free(tab);
