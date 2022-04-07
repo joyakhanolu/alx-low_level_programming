@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -20,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	for (k = 0; s1[k]; k++)
+	for (index = 0; s1[k]; k++)
 		len++;
 
 	concat = malloc(sizeof(char) * (len + 1));
