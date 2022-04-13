@@ -3,10 +3,8 @@
 
 /**
  * print_name - prints a name
- * @name: name to print
- * @f: function to print with
- *
- * Return: void
+ * @name - name to be printed
+ * @f - function to print with
  */
 void print_name(char *name, void (*f)(char *))
 {
