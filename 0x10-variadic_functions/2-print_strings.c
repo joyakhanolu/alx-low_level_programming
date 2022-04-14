@@ -14,14 +14,14 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int j
-	va_list para;
+	va_list strings;
 	char *str;
 
-	va_start(para, n);
+	va_start(strings, n);
 
 	for (j = 0; j < n; j++)
 	{
-		str = va_arg(para, char *);
+		str = va_arg(strings, char *);
 
 		if (str == NULL)
 			printf("(nil)");
@@ -34,5 +34,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	printf("\n");
 
-	va_end(para);
+	va_end(strings);
 }
