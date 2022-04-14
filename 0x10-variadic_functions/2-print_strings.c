@@ -4,22 +4,19 @@
 
 /**
  * print_strings - Prints strings, followed by a new line.
- * @separator: The string to be printed between strings.
- * @n: The number of strings passed to the function.
- * @...: A variable number of strings to be printed.
- *
- * Description: If separator is NULL, it is not printed.
- *              If one of the strings if NULL, (nil) is printed instead.
+ * @separator - string to be printed between strings.
+ * @n - number of strings passed to the function.
+ * @...: variable number of strings to be printed
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	unsigned int j
 	va_list strings;
 	char *str;
+	unsigned int k;
 
 	va_start(strings, n);
 
-	for (j = 0; j < n; j++)
+	for (k = 0; k < n; k++)
 	{
 		str = va_arg(strings, char *);
 
@@ -28,7 +25,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 			printf("%s", str);
 
-		if (j != (n - 1) && separator != NULL)
+		if (index != (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
 
