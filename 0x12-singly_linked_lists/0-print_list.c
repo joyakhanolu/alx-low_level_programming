@@ -9,17 +9,18 @@
 
 size_t print_list(const list_t *h)
 {
-	position p=*h;
+	position p = *h;
 	Strc *tmp;
 	int i;
-	for(i=0;i<10;i++)
+	
+	for(i = 0; i < 10; i++)
 	{
-		if(tmp=(Strc *)malloc(sizeof(Strc)))
+		if(tmp = (Strc *) malloc (sizeof(Strc)))
 		{
-			tmp->row=i;
-			tmp->col=i+1;
-			tmp->value=i+2;
-			p=insertToList(p,tmp);
+			tmp->row = i;
+			tmp->col = i + 1;
+			tmp->value = i + 2;
+			p = insertToList(p,tmp);
 		}
 	}
 }
