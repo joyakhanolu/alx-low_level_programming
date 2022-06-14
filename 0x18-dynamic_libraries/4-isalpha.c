@@ -1,35 +1,12 @@
 #include "main.h"
-
 /**
- * _strspn - Gets the length of a prefix substring.
- * @s: The string to be searched.
- * @accept: The prefix to be measured.
- *
- * Return: The number of bytes in s which
- * consist only of bytes from accept.
- */
-
-unsigned int _strspn(char *s, char *accept)
+*_isalpha - controls if a character is alphabetical
+*@c: character to be verified
+*Return: return 0 or 1
+*/
+int _isalpha(int c)
 {
-	unsigned int bytes = 0;
-	int index;
-
-	while (*s)
-	{
-		for (index = 0; accept[index]; index++)
-		{
-			if (*s == accept[index])
-			{
-				bytes++;
-				break;
-			}
-
-			else if (accept[index + 1] == '\0')
-				return (bytes);
-		}
-
-		s++;
-	}
-
-	return (bytes);
+if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+return (1);
+return (0);
 }
